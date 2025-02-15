@@ -1,0 +1,12 @@
+@media only screen and (max-width: 580px) {
+    #subtitle-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#subtitle-icons {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,59 @@
+@import url("/assets/css/font.css");
+
+/* all of this is the code for the fonts of all of the texts */
+
+body{
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+span, p {
+    font-family: 'Comfortaa';
+    font-weight: 400;
+    color: white;
+}
+
+img {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+li {
+    font-family: 'Comfortaa';
+    font-weight: 400;
+    color: white;
+}
+
+ul {
+    padding-left: 20px; /* Adjust this value to bring text closer */
+    list-style-position: inside;
+}
+
+
+.cropped-web { 
+        text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,32 @@
+/* place to import fonts */
+
+/* this is for the font comfortaa */
+@font-face {
+    font-family: 'Comfortaa';
+    font-weight: 400;
+    src: url(/assets/font/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-weight: 600;
+    src: url(/assets/font/Comfortaa-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Exo';
+    font-weight: 400;
+    src: url(/assets/font/Exo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Exo';
+    font-weight: 600;
+    src: url(/assets/font/Exo-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Exo';
+    font-weight: 500;
+    src: url(/assets/font/Exo-Medium.ttf);
+}
