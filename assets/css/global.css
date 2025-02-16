@@ -6,19 +6,20 @@ body{
     font-family: 'Comfortaa', sans-serif;
     font-weight: 400;
     background-color: black;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 }
 
 h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-size: 50px;
+    color: #B7B6C1;
 }
 
 h2 {
     font-family: 'Exo', sans-serif;
     font-weight: 500;
-    color: white;
+    color: #ffffff;
 }
 
 h3, h4, h5, h6 {
@@ -30,7 +31,7 @@ h3, h4, h5, h6 {
 span, p {
     font-family: 'Comfortaa';
     font-weight: 400;
-    color: white;
+    color: #B7B6C1;
 }
 
 img {
@@ -50,10 +51,49 @@ ul {
     list-style-position: inside;
 }
 
+a {
+    font: 400;
+    text-decoration: none;
+    color: #2191FB;
+}
+
+a:hover {
+    color: #DAF5FF;
+    font-weight: 400;
+
+} 
+
+a:visited {
+    color: #87F6FF;
+    font-weight: 400;
+}
+
+.projects-and-things-I-can-do {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Text {
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #94958B;
+    border: 3px solid #B7B6C1;
+    width: 700px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.Social-media {
+    margin-left: 39px;
+}
 
 .cropped-web { 
         text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
