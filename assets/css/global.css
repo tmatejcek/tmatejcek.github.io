@@ -87,6 +87,17 @@ a:visited {
     padding-bottom: 10px;
 }
 
+@keyframes Text-hover {
+    from {border: 3px solid #050319}
+    to {border: 3px solid #B1E1F1}
+}
+
+.Text:hover {
+    animation-name: Border-change;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
 .Social-media {
     margin-left: 39px;
 }
