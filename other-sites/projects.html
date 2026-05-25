@@ -3,33 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <meta name="description" content="Projects by tmatejcek – this website, calculator, snake game, and alarm clock.">
+    <title>Projects | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
 <body>
-    <div class="cropped-web">
-        <!--Navigation through site-->
-        <p style="text-align: start;">
-            <a href="/index.html">INDEX</a> / <a href="/other-sites/projects.html">PROJECTS</a>
-        </p>
-        <!--Projects list-->
-        <h1>Projects</h1>
-            <h2>These are gonna be my Projects</h2>
-            <h3>I hope to add more of them in the future</h3>
-                <p>
-                    This <a href="https://tmatejcek.github.io/">Website</a>
-                </p>
-                <p>
-                    Calculator
-                </p>
-                <p>
-                    Snake game
-                </p>
-                <p>
-                    Alarm clock
-                </p>
-     </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="main-nav">
+        <a href="/index.html" class="logo">tmatejcek</a>
+        <ul class="nav-links">
+            <li><a href="/other-sites/about-me.html">About</a></li>
+            <li><a href="/other-sites/projects.html">Projects</a></li>
+            <li><a href="/other-sites/skills.html">Skills</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current">Projects</span>
+        </div>
+
+        <!-- Page header -->
+        <div class="page-header reveal">
+            <h1>Projects</h1>
+            <p>Things I've built and am working on — more coming soon!</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Project cards -->
+        <div class="card-grid reveal">
+
+            <div class="card reveal">
+                <span class="badge">🌐 Web</span>
+                <h2 style="margin-top: 0.8rem;">This Website</h2>
+                <p>My personal portfolio site, built from scratch with HTML, CSS, and JavaScript.</p>
+                <a href="https://tmatejcek.github.io/" style="margin-top: 0.8rem; display: inline-block;">
+                    Visit →
+                </a>
+            </div>
+
+            <div class="card reveal">
+                <span class="badge">🧮 Tool</span>
+                <h2 style="margin-top: 0.8rem;">Calculator</h2>
+                <p>A simple calculator built to practice core JavaScript logic.</p>
+            </div>
+
+            <div class="card reveal">
+                <span class="badge">🎮 Game</span>
+                <h2 style="margin-top: 0.8rem;">Snake Game</h2>
+                <p>Classic snake game — a fun project to dive into game loops and canvas rendering.</p>
+            </div>
+
+            <div class="card reveal">
+                <span class="badge">⏰ Utility</span>
+                <h2 style="margin-top: 0.8rem;">Alarm Clock</h2>
+                <p>A functional alarm clock app with timer and notification features.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        &copy; 2025 tmatejcek. Built with care.
+    </footer>
+
+    <!-- Scroll reveal script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
 </body>
 </html>

@@ -1,6 +1,5 @@
-/* place to import fonts */
+/* Local fonts */
 
-/* this is for the font comfortaa */
 @font-face {
     font-family: 'Comfortaa';
     font-weight: 400;
@@ -30,3 +29,6 @@
     font-weight: 500;
     src: url(/assets/font/Exo-Medium.ttf);
 }
+
+/* Google Fonts – Inter for a modern body feel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');

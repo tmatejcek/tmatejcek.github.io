@@ -3,52 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <meta name="description" content="Personal portfolio of tmatejcek – developer from Prague. Explore my projects, skills, and more.">
+    <title>Portfolio | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
-
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 <body>
-    <div class="cropped-web">
-            <!--title-->
-        <h1 style="margin-bottom: 0px; margin-left: 50px;"> Hey there   </h1>
-            <!-- Something about me -->
-            <p> 
-               This is gonna be my personal website thats basically gonna include all the things I have done + something about me.               
+
+    <!-- Navbar -->
+    <nav class="navbar" id="main-nav">
+        <a href="/index.html" class="logo">tmatejcek</a>
+        <ul class="nav-links">
+            <li><a href="/other-sites/about-me.html">About</a></li>
+            <li><a href="/other-sites/projects.html">Projects</a></li>
+            <li><a href="/other-sites/skills.html">Skills</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-orb hero-orb--1"></div>
+            <div class="hero-orb hero-orb--2"></div>
+            <div class="hero-orb hero-orb--3"></div>
+            <h1><span class="typewriter">Hey there 👋</span></h1>
+            <p class="hero-subtitle">
+                Welcome to my personal website — a place where I share everything I've done and a bit about who I am.
             </p>
-                    <!--Boxes that redirect you-->
-            <div class="Redirect-boxes">
-                <div class="Box">
-                    <a href="/other-sites/about-me.html">
-                        <div class="Text">
-                            <h2 style="color: #050319";>About me</h2>
-                        </div>
-                    </a>
-                </div>
-                <div class="Box">
-                    <a href="/other-sites/projects.html">
-                        <div class="Text">
-                            <h2 style="color: #050319";>Projects</h2>
-                        </div>
-                    </a>
-                </div>
-                <div class="Box">
-                    <a href="/other-sites/skills.html">
-                        <div class="Text">
-                            <h2 style="color: #050319";>Skills</h2>
-                        </div>
-                    </a>
-                </div>
-            </div>      
-                
-                <!--My social media-->
-                <div class="Social-media">
-                    <h2 style="margin-bottom: 10px;"> <span>My social media</span></h2>
-                    <a href="https://discordapp.com/users/699575528679538748/"><img height="50px" src="/assets/img/icons/Discord/icons8-discord-100.png" alt="Discord icon" style="margin-left: 7px;"></a>
-                    <a href="https://www.instagram.com/your.local.blahaj/"><img height="50px" src="/assets/img/icons/Instagram/icons8-instagram-100.png" alt="Instagram icon"></a>
-                    <a href="https://github.com/tmatejcek"><img height="50px" src="/assets/img/icons/Github/icons8-github-100.png" alt="Github icon"></a>
-                </div>
-            
+        </section>
+
+        <hr class="divider">
+
+        <!-- Navigation Cards -->
+        <section class="reveal" id="explore-section">
+            <h2 class="section-title">Explore</h2>
+            <p class="section-subtitle">Dive into different parts of my world</p>
+
+            <div class="nav-cards">
+                <a href="/other-sites/about-me.html" class="card-link">
+                    <div class="card nav-card reveal">
+                        <span class="nav-card-icon">👤</span>
+                        <h2>About Me</h2>
+                        <p>Where I come from, my interests, and certificates</p>
+                    </div>
+                </a>
+                <a href="/other-sites/projects.html" class="card-link">
+                    <div class="card nav-card reveal">
+                        <span class="nav-card-icon">🚀</span>
+                        <h2>Projects</h2>
+                        <p>Things I've built and am working on</p>
+                    </div>
+                </a>
+                <a href="/other-sites/skills.html" class="card-link">
+                    <div class="card nav-card reveal">
+                        <span class="nav-card-icon">⚡</span>
+                        <h2>Skills</h2>
+                        <p>Technologies and languages I know</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Social Media -->
+        <section class="social-section reveal" id="social-section">
+            <h2 class="section-title">Connect with me</h2>
+            <p class="section-subtitle">Find me on these platforms</p>
+            <div class="social-row social-row--centered">
+                <a href="https://discordapp.com/users/699575528679538748/" aria-label="Discord">
+                    <img class="social-icon" src="/assets/img/icons/Discord/icons8-discord-100.png" alt="Discord">
+                </a>
+                <a href="https://www.instagram.com/your.local.blahaj/" aria-label="Instagram">
+                    <img class="social-icon" src="/assets/img/icons/Instagram/icons8-instagram-100.png" alt="Instagram">
+                </a>
+                <a href="https://github.com/tmatejcek" aria-label="GitHub">
+                    <img class="social-icon" src="/assets/img/icons/Github/icons8-github-100.png" alt="GitHub">
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        &copy; 2025 tmatejcek. Built with care.
+    </footer>
+
+    <!-- Scroll reveal script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
 </body>
 </html>

@@ -3,33 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <meta name="description" content="Skills and technologies that tmatejcek knows – CSS, HTML, Python, English, and game development.">
+    <title>Skills | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
 <body>
-    <div class="cropped-web">
-        <!--Navigation through site-->
-        <p style="text-align: start;">
-            <a href="/index.html">INDEX</a> / <a href="https://tmatejcek.github.io/skills.html">SKILLS</a>
-        </p>
-        <H1>Skills</H1>
-            <h2><img src="/assets/img/icons/CSS/icons8-css-50.png" alt="CSS icon" style="height: 20px; "> CSS</h2>
-                <p>
-                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
-                </p>
-            <h2><img src="/assets/img/icons/HTML/icons8-html-100.png" alt="HTML icon" style="height: 20px; margin-top: 10px;"> HTML</h2>
-                <p>
-                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
-                </p>
-            <h2><img src="/assets/img/icons/Python/icons8-python-50.png" alt="Python icon" style="height: 20px; margin-top: 10px;"> Python</h2>
-                <p>I somewhat know how to use <a href="https://www.python.org/">Python</a></p>
-            <h2>English</h2>
-            <p>I have taken part in participating in the <a href="https://www.cambridgeenglish.org/"></a>Cambridge tests sadly I only got level A2
-            but I think I would be able to get B2 maybe C1</p>
-            <h2>Video game development</h2>
-            <p>I have some basic knowledge of <a href="https://en.wikipedia.org/wiki/Video_game_development">Video game development</a></p>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="main-nav">
+        <a href="/index.html" class="logo">tmatejcek</a>
+        <ul class="nav-links">
+            <li><a href="/other-sites/about-me.html">About</a></li>
+            <li><a href="/other-sites/projects.html">Projects</a></li>
+            <li><a href="/other-sites/skills.html">Skills</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current">Skills</span>
         </div>
+
+        <!-- Page header -->
+        <div class="page-header reveal">
+            <h1>Skills</h1>
+            <p>Technologies and languages I work with</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Skill cards -->
+        <div class="card-grid reveal">
+
+            <div class="card content-section reveal">
+                <h2>
+                    <img class="card-icon" src="/assets/img/icons/CSS/icons8-css-50.png" alt="">
+                    CSS
+                </h2>
+                <span class="badge">Web</span>
+                <p style="margin-top: 0.8rem;">
+                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>.
+                </p>
+            </div>
+
+            <div class="card content-section reveal">
+                <h2>
+                    <img class="card-icon" src="/assets/img/icons/HTML/icons8-html-100.png" alt="">
+                    HTML
+                </h2>
+                <span class="badge">Web</span>
+                <p style="margin-top: 0.8rem;">
+                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>.
+                </p>
+            </div>
+
+            <div class="card content-section reveal">
+                <h2>
+                    <img class="card-icon" src="/assets/img/icons/Python/icons8-python-50.png" alt="">
+                    Python
+                </h2>
+                <span class="badge">Language</span>
+                <p style="margin-top: 0.8rem;">
+                    I somewhat know how to use <a href="https://www.python.org/">Python</a>.
+                </p>
+            </div>
+
+            <div class="card content-section reveal">
+                <h2>English</h2>
+                <span class="badge">Language</span>
+                <p style="margin-top: 0.8rem;">
+                    I have taken part in the <a href="https://www.cambridgeenglish.org/">Cambridge</a> tests — I got level A2 but I think I could get B2 or maybe C1.
+                </p>
+            </div>
+
+            <div class="card content-section reveal">
+                <h2>Video Game Development</h2>
+                <span class="badge">Creative</span>
+                <p style="margin-top: 0.8rem;">
+                    I have some basic knowledge of <a href="https://en.wikipedia.org/wiki/Video_game_development">video game development</a>.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        &copy; 2025 tmatejcek. Built with care.
+    </footer>
+
+    <!-- Scroll reveal script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
 </body>
 </html>
