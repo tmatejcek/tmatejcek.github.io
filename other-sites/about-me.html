@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about tmatejcek – a developer from Prague with a passion for coding, video games, and biology.">
+    <meta name="description"
+        content="Learn more about tmatejcek – a developer from Prague with a passion for coding, video games, and biology.">
     <title>About Me | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar" id="main-nav">
-        <a href="/index.html" class="logo">tmatejcek</a>
+        <a href="/index.html" class="logo">Studik</a>
         <ul class="nav-links">
-            <li><a href="/other-sites/about-me.html">About</a></li>
-            <li><a href="/other-sites/projects.html">Projects</a></li>
-            <li><a href="/other-sites/skills.html">Skills</a></li>
+            <li><a href="/other-sites/about-me.html" data-i18n="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-i18n="nav.skills">Skills</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cz">CZ</button>
+        </div>
     </nav>
 
     <main class="page-wrapper">
 
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <a href="/index.html">Home</a>
+            <a href="/index.html" data-i18n="breadcrumb.home">Home</a>
             <span class="separator">/</span>
-            <span class="current">About Me</span>
+            <span class="current" data-i18n="breadcrumb.about">About Me</span>
         </div>
 
         <!-- Page header -->
         <div class="page-header reveal">
-            <h1>About Me</h1>
+            <h1 data-i18n="about.title">About Me</h1>
         </div>
 
         <hr class="divider">
+
+        <!-- Cursor -->
+        <div class="inner-cursor"></div>
+        <div class="outer-cursor"></div>
 
         <!-- Where I come from -->
         <div class="card content-section reveal">
             <h2>
                 <img class="card-icon" src="/assets/img/icons/Pin/icons8-pin-50.png" alt="">
-                Where I come from
+                <span data-i18n="about.origin.title">Where I come from</span>
             </h2>
-            <p>
+            <p data-i18n="about.origin.text">
                 I come from <a href="https://praguecitytourism.cz/cs/">Prague</a> and have lived here since birth.
             </p>
         </div>
@@ -51,10 +62,11 @@
         <div class="card content-section reveal">
             <h2>
                 <img class="card-icon" src="/assets/img/icons/Phone/icons8-phone-50.png" alt="">
-                My interests
+                <span data-i18n="about.interests.title">My interests</span>
             </h2>
-            <p>
-                My free time activities include playing <a href="https://en.wikipedia.org/wiki/Video_game">video games</a>, coding, biology and talking with people.
+            <p data-i18n="about.interests.text">
+                My free time activities include playing <a href="https://en.wikipedia.org/wiki/Video_game">video
+                    games</a>, coding, biology and talking with people.
             </p>
         </div>
 
@@ -62,10 +74,11 @@
         <div class="card content-section reveal">
             <h2>
                 <img class="card-icon" src="/assets/img/icons/Lightbulb/icons8-light-bulb-50.png" alt="">
-                My projects
+                <span data-i18n="about.projects.title">My projects</span>
             </h2>
-            <p>
-                I sadly don't have any apart from this site but I plan on making some and including them in the <a href="/other-sites/projects.html">Projects</a> section.
+            <p data-i18n="about.projects.text">
+                I sadly don't have any apart from this site but I plan on making some and including them in the <a
+                    href="/other-sites/projects.html">Projects</a> section.
             </p>
         </div>
 
@@ -73,9 +86,9 @@
         <div class="card content-section reveal">
             <h2>
                 <img class="card-icon" src="/assets/img/icons/Diploma/icons8-diploma-50.png" alt="">
-                My certificates
+                <span data-i18n="about.certs.title">My certificates</span>
             </h2>
-            <p>
+            <p data-i18n="about.certs.text">
                 I have passed the <a href="https://www.cambridgeenglish.org/">Cambridge</a> tests.
             </p>
         </div>
@@ -84,9 +97,9 @@
         <div class="card content-section reveal">
             <h2>
                 <img class="card-icon" src="/assets/img/icons/Techdays/Certifikát.pdf.png" alt="">
-                Techdays
+                <span data-i18n="about.techdays.title">Techdays</span>
             </h2>
-            <p>
+            <p data-i18n="about.techdays.text">
                 I have attended the <a href="https://www.ssps.cz/techdays-a-hackdays/">Techdays</a> training course.
             </p>
         </div>
@@ -94,8 +107,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
-        &copy; 2025 tmatejcek. Built with care.
+    <footer class="footer" id="footer" data-i18n="footer">
+        &copy; 2025 Studik. Built with care.
     </footer>
 
     <!-- Scroll reveal script -->
@@ -113,6 +126,9 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/cursor.js"></script>
 
 </body>
+
 </html>

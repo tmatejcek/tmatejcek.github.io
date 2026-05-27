@@ -2,18 +2,21 @@
 
 /* ───────── Color palette ───────── */
 :root {
-    --black:  #181825;
+    --black: #181825;
     --indigo: #3B3355;
-    --grape:  #5D5D81;
-    --sky:    #BFCDE0;
-    --white:  #FEFCFD;
+    --grape: #5D5D81;
+    --sky: #BFCDE0;
+    --white: #FEFCFD;
 }
 
 /* ───────── Reset & base ───────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 html {
@@ -46,13 +49,17 @@ h2 {
     color: var(--white);
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Exo', sans-serif;
     font-weight: 500;
     color: var(--sky);
 }
 
-p, span {
+p,
+span {
     font-family: 'Inter', 'Comfortaa', sans-serif;
     font-weight: 400;
     color: var(--sky);
@@ -187,6 +194,40 @@ a:visited {
     display: none;
 }
 
+/* ───────── Language toggle ───────── */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-left: 1.2rem;
+    border: 1px solid var(--grape);
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--grape);
+    font-family: 'Inter', 'Comfortaa', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.lang-btn.active {
+    background: var(--grape);
+    color: var(--white);
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--sky);
+}
+
 /* ───────── Hero section ───────── */
 .hero {
     text-align: center;
@@ -200,7 +241,7 @@ a:visited {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(191,205,224,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(191, 205, 224, 0.12) 0%, transparent 70%);
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
@@ -213,7 +254,7 @@ a:visited {
     position: absolute;
     width: 250px;
     height: 250px;
-    background: radial-gradient(circle, rgba(93,93,129,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(93, 93, 129, 0.15) 0%, transparent 70%);
     bottom: -50px;
     right: 10%;
     animation: float 10s ease-in-out infinite reverse;
@@ -242,22 +283,43 @@ a:visited {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--sky) }
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--sky)
+    }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-30px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-30px);
+    }
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 /* ───────── Cards ───────── */
@@ -276,7 +338,7 @@ a:visited {
     position: absolute;
     inset: 0;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(191,205,224,0.05) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(191, 205, 224, 0.05) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.35s ease;
     pointer-events: none;
@@ -354,8 +416,13 @@ a:visited {
 }
 
 @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 /* ───────── Section headings ───────── */
@@ -388,7 +455,7 @@ a:visited {
 
 .social-icon:hover {
     transform: scale(1.2);
-    filter: brightness(1) drop-shadow(0 0 8px rgba(191,205,224,0.4));
+    filter: brightness(1) drop-shadow(0 0 8px rgba(191, 205, 224, 0.4));
 }
 
 /* ───────── Breadcrumb ───────── */
@@ -448,12 +515,29 @@ a:visited {
 }
 
 /* Staggered delays for card grids */
-.card-grid .card:nth-child(1) { transition-delay: 0s; }
-.card-grid .card:nth-child(2) { transition-delay: 0.1s; }
-.card-grid .card:nth-child(3) { transition-delay: 0.2s; }
-.card-grid .card:nth-child(4) { transition-delay: 0.3s; }
-.card-grid .card:nth-child(5) { transition-delay: 0.4s; }
-.card-grid .card:nth-child(6) { transition-delay: 0.5s; }
+.card-grid .card:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.card-grid .card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.card-grid .card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.card-grid .card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.card-grid .card:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.card-grid .card:nth-child(6) {
+    transition-delay: 0.5s;
+}
 
 /* ───────── Footer ───────── */
 .footer {
@@ -514,4 +598,34 @@ a:visited {
         flex-direction: column;
         gap: 0.8rem;
     }
+}
+
+/* ───────── Cursor ───────── */
+.outer-cursor {
+    position: fixed;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    translate: -50% -50%;
+    background: #9090c8;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    z-index: 99999;
+    will-change: transform;
+}
+
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    translate: -50% -50%;
+    border: 1px solid #ffffff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.1s;
+    z-index: 99999;
 }

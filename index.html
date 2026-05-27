@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of tmatejcek – developer from Prague. Explore my projects, skills, and more.">
+    <meta name="description"
+        content="Personal portfolio of tmatejcek – developer from Prague. Explore my projects, skills, and more.">
     <title>Portfolio | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/index.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar" id="main-nav">
-        <a href="/index.html" class="logo">tmatejcek</a>
+        <a href="/index.html" class="logo">Studik</a>
         <ul class="nav-links">
-            <li><a href="/other-sites/about-me.html">About</a></li>
-            <li><a href="/other-sites/projects.html">Projects</a></li>
-            <li><a href="/other-sites/skills.html">Skills</a></li>
+            <li><a href="/other-sites/about-me.html" data-i18n="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-i18n="nav.skills">Skills</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cz">CZ</button>
+        </div>
     </nav>
 
     <main class="page-wrapper">
@@ -28,39 +35,46 @@
             <div class="hero-orb hero-orb--1"></div>
             <div class="hero-orb hero-orb--2"></div>
             <div class="hero-orb hero-orb--3"></div>
-            <h1><span class="typewriter">Hey there 👋</span></h1>
-            <p class="hero-subtitle">
-                Welcome to my personal website — a place where I share everything I've done and a bit about who I am.
-            </p>
+            <p>Hiya there! I'm <strong>Studik</strong></p>
+            <h1 class="typewriter">Developer. Designer. Builder.</h1>
+            <p class="hero-subtitle">Welcome to my corner of the internet.</p>
         </section>
 
         <hr class="divider">
 
+        <!-- Cursor -->
+        <div class="inner-cursor"></div>
+        <div class="outer-cursor"></div>
+
         <!-- Navigation Cards -->
         <section class="reveal" id="explore-section">
-            <h2 class="section-title">Explore</h2>
-            <p class="section-subtitle">Dive into different parts of my world</p>
+            <h2 align="center" class="section-title" data-i18n="explore.title">Explore</h2>
+            <p align="center" class="section-subtitle" data-i18n="explore.subtitle">Dive into different parts of my
+                world</p>
 
             <div class="nav-cards">
                 <a href="/other-sites/about-me.html" class="card-link">
                     <div class="card nav-card reveal">
-                        <span class="nav-card-icon">👤</span>
-                        <h2>About Me</h2>
-                        <p>Where I come from, my interests, and certificates</p>
+                        <img style="padding-left: 10px;" class="card-icon" src="/assets/img/icons/Person/user.png"
+                            alt="">
+                        <h2 data-i18n="card.about">About Me</h2>
+                        <p data-i18n="card.about.desc">Where I come from, my interests, and certificates</p>
                     </div>
                 </a>
                 <a href="/other-sites/projects.html" class="card-link">
                     <div class="card nav-card reveal">
-                        <span class="nav-card-icon">🚀</span>
-                        <h2>Projects</h2>
-                        <p>Things I've built and am working on</p>
+                        <img style="padding-left: 10px;" class="card-icon" src="/assets/img/icons/Rocketship/rocket.png"
+                            alt="">
+                        <h2 data-i18n="card.projects">Projects</h2>
+                        <p data-i18n="card.projects.desc">Things I've built and am working on</p>
                     </div>
                 </a>
                 <a href="/other-sites/skills.html" class="card-link">
                     <div class="card nav-card reveal">
-                        <span class="nav-card-icon">⚡</span>
-                        <h2>Skills</h2>
-                        <p>Technologies and languages I know</p>
+                        <img style="padding-left: 10px;" class="card-icon"
+                            src="/assets/img/icons/Lightning bolt/flash.png" alt="">
+                        <h2 data-i18n="card.skills">Skills</h2>
+                        <p data-i18n="card.skills.desc">Technologies and languages I know</p>
                     </div>
                 </a>
             </div>
@@ -70,8 +84,8 @@
 
         <!-- Social Media -->
         <section class="social-section reveal" id="social-section">
-            <h2 class="section-title">Connect with me</h2>
-            <p class="section-subtitle">Find me on these platforms</p>
+            <h2 class="section-title" data-i18n="social.title">Connect with me</h2>
+            <p class="section-subtitle" data-i18n="social.subtitle">Find me on these platforms</p>
             <div class="social-row social-row--centered">
                 <a href="https://discordapp.com/users/699575528679538748/" aria-label="Discord">
                     <img class="social-icon" src="/assets/img/icons/Discord/icons8-discord-100.png" alt="Discord">
@@ -88,8 +102,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
-        &copy; 2025 tmatejcek. Built with care.
+    <footer class="footer" id="footer" data-i18n="footer">
+        &copy; 2025 Studik. Built with care.
     </footer>
 
     <!-- Scroll reveal script -->
@@ -107,6 +121,9 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/cursor.js"></script>
 
 </body>
+
 </html>

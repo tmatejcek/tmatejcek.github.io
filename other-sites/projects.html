@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,75 @@
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar" id="main-nav">
-        <a href="/index.html" class="logo">tmatejcek</a>
+        <a href="/index.html" class="logo">Studik</a>
         <ul class="nav-links">
-            <li><a href="/other-sites/about-me.html">About</a></li>
-            <li><a href="/other-sites/projects.html">Projects</a></li>
-            <li><a href="/other-sites/skills.html">Skills</a></li>
+            <li><a href="/other-sites/about-me.html" data-i18n="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-i18n="nav.skills">Skills</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cz">CZ</button>
+        </div>
     </nav>
 
     <main class="page-wrapper">
 
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <a href="/index.html">Home</a>
+            <a href="/index.html" data-i18n="breadcrumb.home">Home</a>
             <span class="separator">/</span>
-            <span class="current">Projects</span>
+            <span class="current" data-i18n="breadcrumb.projects">Projects</span>
         </div>
 
         <!-- Page header -->
         <div class="page-header reveal">
-            <h1>Projects</h1>
-            <p>Things I've built and am working on — more coming soon!</p>
+            <h1 data-i18n="projects.title">Projects</h1>
+            <p data-i18n="projects.subtitle">Things I've built and am working on — more coming soon!</p>
         </div>
 
         <hr class="divider">
+
+        <!-- Cursor -->
+        <div class="inner-cursor"></div>
+        <div class="outer-cursor"></div>
 
         <!-- Project cards -->
         <div class="card-grid reveal">
 
             <div class="card reveal">
-                <span class="badge">🌐 Web</span>
-                <h2 style="margin-top: 0.8rem;">This Website</h2>
-                <p>My personal portfolio site, built from scratch with HTML, CSS, and JavaScript.</p>
-                <a href="https://tmatejcek.github.io/" style="margin-top: 0.8rem; display: inline-block;">
+                <span class="badge">Web</span>
+                <h2 style="margin-top: 0.8rem;" data-i18n="proj.website.title">This Website</h2>
+                <p data-i18n="proj.website.desc">My personal portfolio site, built from scratch with HTML, CSS, and
+                    JavaScript.</p>
+                <a href="https://tmatejcek.github.io/" style="margin-top: 0.8rem; display: inline-block;"
+                    data-i18n="proj.website.link">
                     Visit →
                 </a>
             </div>
 
             <div class="card reveal">
-                <span class="badge">🧮 Tool</span>
-                <h2 style="margin-top: 0.8rem;">Calculator</h2>
-                <p>A simple calculator built to practice core JavaScript logic.</p>
+                <span class="badge">Tool</span>
+                <h2 style="margin-top: 0.8rem;" data-i18n="proj.calc.title">Calculator</h2>
+                <p data-i18n="proj.calc.desc">A simple calculator built to practice core JavaScript logic.</p>
             </div>
 
             <div class="card reveal">
-                <span class="badge">🎮 Game</span>
-                <h2 style="margin-top: 0.8rem;">Snake Game</h2>
-                <p>Classic snake game — a fun project to dive into game loops and canvas rendering.</p>
+                <span class="badge">Game</span>
+                <h2 style="margin-top: 0.8rem;" data-i18n="proj.snake.title">Snake Game</h2>
+                <p data-i18n="proj.snake.desc">Classic snake game — a fun project to dive into game loops and canvas
+                    rendering.</p>
             </div>
 
             <div class="card reveal">
-                <span class="badge">⏰ Utility</span>
-                <h2 style="margin-top: 0.8rem;">Alarm Clock</h2>
-                <p>A functional alarm clock app with timer and notification features.</p>
+                <span class="badge">Utility</span>
+                <h2 style="margin-top: 0.8rem;" data-i18n="proj.alarm.title">Alarm Clock</h2>
+                <p data-i18n="proj.alarm.desc">A functional alarm clock app with timer and notification features.</p>
             </div>
 
         </div>
@@ -72,8 +85,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
-        &copy; 2025 tmatejcek. Built with care.
+    <footer class="footer" id="footer" data-i18n="footer">
+        &copy; 2025 Studik. Built with care.
     </footer>
 
     <!-- Scroll reveal script -->
@@ -91,6 +104,9 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/cursor.js"></script>
 
 </body>
+
 </html>

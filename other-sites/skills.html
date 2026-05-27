@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Skills and technologies that tmatejcek knows – CSS, HTML, Python, English, and game development.">
+    <meta name="description"
+        content="Skills and technologies that tmatejcek knows – CSS, HTML, Python, English, and game development.">
     <title>Skills | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar" id="main-nav">
-        <a href="/index.html" class="logo">tmatejcek</a>
+        <a href="/index.html" class="logo">Studik</a>
         <ul class="nav-links">
-            <li><a href="/other-sites/about-me.html">About</a></li>
-            <li><a href="/other-sites/projects.html">Projects</a></li>
-            <li><a href="/other-sites/skills.html">Skills</a></li>
+            <li><a href="/other-sites/about-me.html" data-i18n="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-i18n="nav.skills">Skills</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cz">CZ</button>
+        </div>
     </nav>
 
     <main class="page-wrapper">
 
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <a href="/index.html">Home</a>
+            <a href="/index.html" data-i18n="breadcrumb.home">Home</a>
             <span class="separator">/</span>
-            <span class="current">Skills</span>
+            <span class="current" data-i18n="breadcrumb.skills">Skills</span>
         </div>
 
         <!-- Page header -->
         <div class="page-header reveal">
-            <h1>Skills</h1>
-            <p>Technologies and languages I work with</p>
+            <h1 data-i18n="skills.title">Skills</h1>
+            <p data-i18n="skills.subtitle">Technologies and languages I work with</p>
         </div>
 
         <hr class="divider">
+
+        <!-- Cursor -->
+        <div class="inner-cursor"></div>
+        <div class="outer-cursor"></div>
 
         <!-- Skill cards -->
         <div class="card-grid reveal">
@@ -46,8 +57,9 @@
                     CSS
                 </h2>
                 <span class="badge">Web</span>
-                <p style="margin-top: 0.8rem;">
-                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>.
+                <p style="margin-top: 0.8rem;" data-i18n="skills.css.desc">
+                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> in combination
+                    with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>.
                 </p>
             </div>
 
@@ -57,8 +69,9 @@
                     HTML
                 </h2>
                 <span class="badge">Web</span>
-                <p style="margin-top: 0.8rem;">
-                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>.
+                <p style="margin-top: 0.8rem;" data-i18n="skills.html.desc">
+                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> in
+                    combination with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>.
                 </p>
             </div>
 
@@ -68,7 +81,7 @@
                     Python
                 </h2>
                 <span class="badge">Language</span>
-                <p style="margin-top: 0.8rem;">
+                <p style="margin-top: 0.8rem;" data-i18n="skills.python.desc">
                     I somewhat know how to use <a href="https://www.python.org/">Python</a>.
                 </p>
             </div>
@@ -76,16 +89,18 @@
             <div class="card content-section reveal">
                 <h2>English</h2>
                 <span class="badge">Language</span>
-                <p style="margin-top: 0.8rem;">
-                    I have taken part in the <a href="https://www.cambridgeenglish.org/">Cambridge</a> tests — I got level A2 but I think I could get B2 or maybe C1.
+                <p style="margin-top: 0.8rem;" data-i18n="skills.english.desc">
+                    I have taken part in the <a href="https://www.cambridgeenglish.org/">Cambridge</a> tests — I got
+                    level A2 but I think I could get B2 or maybe C1.
                 </p>
             </div>
 
             <div class="card content-section reveal">
                 <h2>Video Game Development</h2>
                 <span class="badge">Creative</span>
-                <p style="margin-top: 0.8rem;">
-                    I have some basic knowledge of <a href="https://en.wikipedia.org/wiki/Video_game_development">video game development</a>.
+                <p style="margin-top: 0.8rem;" data-i18n="skills.gamedev.desc">
+                    I have some basic knowledge of <a href="https://en.wikipedia.org/wiki/Video_game_development">video
+                        game development</a>.
                 </p>
             </div>
 
@@ -94,8 +109,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
-        &copy; 2025 tmatejcek. Built with care.
+    <footer class="footer" id="footer" data-i18n="footer">
+        &copy; 2025 Studik. Built with care.
     </footer>
 
     <!-- Scroll reveal script -->
@@ -113,6 +128,9 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/cursor.js"></script>
 
 </body>
+
 </html>
