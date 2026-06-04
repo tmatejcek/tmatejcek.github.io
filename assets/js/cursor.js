@@ -33,8 +33,8 @@ function animate() {
         outer_pos.x = lerp(outer_pos.x, mouse.x, 0.08);
         outer_pos.y = lerp(outer_pos.y, mouse.y, 0.08);
 
-        inner.style.transform = `translate(${inner_pos.x}px, ${inner_pos.y}px)`;
-        outer.style.transform = `translate(${outer_pos.x}px, ${outer_pos.y}px)`;
+        inner.style.transform = `translate(${inner_pos.x}px, ${inner_pos.y}px) translate(-50%, -50%)`;
+        outer.style.transform = `translate(${outer_pos.x}px, ${outer_pos.y}px) translate(-50%, -50%)`;
     }
 
     requestAnimationFrame(animate);
