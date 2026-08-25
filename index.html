@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Personal portfolio of tmatejcek – developer from Prague. Explore my projects, skills, and more.">
-    <title>Portfolio | tmatejcek</title>
+        content="Welcome to Studik's portfolio website, showcasing projects, skills, and personal information.">
+    <title>Portfolio | Studik</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/index.css">
@@ -18,9 +18,9 @@
     <nav class="navbar" id="main-nav">
         <a href="/index.html" class="logo">Studik</a>
         <ul class="nav-links">
-            <li><a href="/other-sites/about-me.html" data-i18n="nav.about">About</a></li>
-            <li><a href="/other-sites/projects.html" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="/other-sites/skills.html" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="/other-sites/about.html" data-translations="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-translations="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-translations="nav.skills">Skills</a></li>
         </ul>
         <div class="lang-toggle">
             <button class="lang-btn active" data-lang="en">EN</button>
@@ -35,46 +35,41 @@
             <div class="hero-orb hero-orb--1"></div>
             <div class="hero-orb hero-orb--2"></div>
             <div class="hero-orb hero-orb--3"></div>
-            <p>Hiya there! I'm <strong>Studik</strong></p>
-            <h1 class="typewriter">Developer. Designer. Builder.</h1>
-            <p class="hero-subtitle">Welcome to my corner of the internet.</p>
+            <h1 data-translations="hero.greeting">Hiya there! I'm <strong>Studik</strong></h1>
+            <img class="hero-image" src="https://i.pinimg.com/236x/00/b2/07/00b207d3ec39a8cb17d96f6fab8e095e.jpg" alt="Studik's avatar">
+            <p class="hero-subtitle" data-translations="hero.subtitle">Welcome to my site where you will find everything about me and what I do.</p>
         </section>
 
         <hr class="divider">
 
-        <!-- Cursor -->
-        <div class="inner-cursor"></div>
-        <div class="outer-cursor"></div>
-
         <!-- Navigation Cards -->
         <section class="reveal" id="explore-section">
-            <h2 align="center" class="section-title" data-i18n="explore.title">Explore</h2>
-            <p align="center" class="section-subtitle" data-i18n="explore.subtitle">Dive into different parts of my
-                world</p>
+            <h2 align="center" class="section-title" data-translations="explore.title">Explore</h2>
+            <p align="center" class="section-subtitle" data-translations="explore.subtitle">Explore different sections of my site</p>
 
             <div class="nav-cards">
-                <a href="/other-sites/about-me.html" class="card-link">
+                <a href="/other-sites/about.html" class="card-link">
                     <div class="card nav-card reveal">
                         <img style="padding-left: 10px;" class="card-icon" src="/assets/img/icons/Person/user.png"
                             alt="">
-                        <h2 data-i18n="card.about">About Me</h2>
-                        <p data-i18n="card.about.desc">Where I come from, my interests, and certificates</p>
+                        <h1 data-translations="card.about">About Me</h1>
+                        <p data-translations="card.about.desc">My interests, technical capabilities and why they interest me and my projects</p>
                     </div>
                 </a>
                 <a href="/other-sites/projects.html" class="card-link">
                     <div class="card nav-card reveal">
                         <img style="padding-left: 10px;" class="card-icon" src="/assets/img/icons/Rocketship/rocket.png"
                             alt="">
-                        <h2 data-i18n="card.projects">Projects</h2>
-                        <p data-i18n="card.projects.desc">Things I've built and am working on</p>
+                        <h1 data-translations="card.projects">Projects</h1>
+                        <p data-translations="card.projects.desc">Things I've built and am working on</p>
                     </div>
                 </a>
                 <a href="/other-sites/skills.html" class="card-link">
                     <div class="card nav-card reveal">
                         <img style="padding-left: 10px;" class="card-icon"
                             src="/assets/img/icons/Lightning bolt/flash.png" alt="">
-                        <h2 data-i18n="card.skills">Skills</h2>
-                        <p data-i18n="card.skills.desc">Technologies and languages I know</p>
+                        <h1 data-translations="card.skills">Skills</h1>
+                        <p data-translations="card.skills.desc">Technical capabilities</p>
                     </div>
                 </a>
             </div>
@@ -84,8 +79,8 @@
 
         <!-- Social Media -->
         <section class="social-section reveal" id="social-section">
-            <h2 class="section-title" data-i18n="social.title">Connect with me</h2>
-            <p class="section-subtitle" data-i18n="social.subtitle">Find me on these platforms</p>
+            <h2 class="section-title" data-translations="social.title">Connect with me</h2>
+            <p class="section-subtitle" data-translations="social.subtitle">Find me on these platforms</p>
             <div class="social-row social-row--centered">
                 <a href="https://discordapp.com/users/699575528679538748/" aria-label="Discord">
                     <img class="social-icon" src="/assets/img/icons/Discord/icons8-discord-100.png" alt="Discord">
@@ -102,7 +97,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer" data-i18n="footer">
+    <footer class="footer" id="footer" data-translations="footer">
         &copy; 2025 Studik. Built with care.
     </footer>
 
@@ -121,8 +116,7 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-    <script src="/assets/js/i18n.js"></script>
-    <script src="/assets/js/cursor.js"></script>
+    <script src="/assets/js/translations.js"></script>
 
 </body>
 

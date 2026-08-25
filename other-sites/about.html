@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn more about Studik a developer from Prague with a passion for coding, video games, and biology.">
+    <title>About Me | Studik</title>
+    <link rel="stylesheet" href="/assets/css/font.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="main-nav">
+        <a href="/index.html" class="logo">Studik</a>
+        <ul class="nav-links">
+            <li><a href="/other-sites/about.html" data-translations="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-translations="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-translations="nav.skills">Skills</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="cz">CZ</button>
+        </div>
+    </nav>
+
+    <main class="page-wrapper">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/index.html" data-translations="breadcrumb.home">Home</a>
+            <span class="separator">/</span>
+            <span class="current" data-translations="breadcrumb.about">About Me</span>
+        </div>
+
+        <!-- Page header -->
+        <div class="page-header reveal">
+            <h1 data-translations="about.title">About Me</h1>
+            <p data-translations="about.subtitle">Learn more about my background and interests</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="card content-section about-content reveal">
+            <section>
+                <h2 data-translations="about.story.title">About Me</h2>
+                <p style="margin-top: 0.5rem;" data-translations="about.story.1"></p>
+                <p style="margin-top: 0.5rem;" data-translations="about.story.2"></p>
+
+                <h2 data-translations="about.skills.title">Skills &amp; Interests</h2>
+                <p style="margin-top: 0.5rem;" data-translations="about.skills.1"></p>
+                <p style="margin-top: 0.5rem;" data-translations="about.skills.2"></p>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer" data-translations="footer">
+        &copy; 2025 Studik. Built with care.
+    </footer>
+
+    <!-- Scroll reveal script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="/assets/js/translations.js"></script>
+
+</body>
+
+</html>

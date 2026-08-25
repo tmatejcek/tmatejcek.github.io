@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Skills and technologies that tmatejcek knows – CSS, HTML, Python, English, and game development.">
+        content="Skills and technologies that tmatejcek is learning – cybersecurity, programming, networking, Linux, and Windows administration.">
     <title>Skills | tmatejcek</title>
     <link rel="stylesheet" href="/assets/css/font.css">
     <link rel="stylesheet" href="/assets/css/global.css">
@@ -17,9 +17,9 @@
     <nav class="navbar" id="main-nav">
         <a href="/index.html" class="logo">Studik</a>
         <ul class="nav-links">
-            <li><a href="/other-sites/about-me.html" data-i18n="nav.about">About</a></li>
-            <li><a href="/other-sites/projects.html" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="/other-sites/skills.html" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="/other-sites/about.html" data-translations="nav.about">About</a></li>
+            <li><a href="/other-sites/projects.html" data-translations="nav.projects">Projects</a></li>
+            <li><a href="/other-sites/skills.html" data-translations="nav.skills">Skills</a></li>
         </ul>
         <div class="lang-toggle">
             <button class="lang-btn active" data-lang="en">EN</button>
@@ -31,76 +31,55 @@
 
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <a href="/index.html" data-i18n="breadcrumb.home">Home</a>
+            <a href="/index.html" data-translations="breadcrumb.home">Home</a>
             <span class="separator">/</span>
-            <span class="current" data-i18n="breadcrumb.skills">Skills</span>
+            <span class="current" data-translations="breadcrumb.skills">Skills</span>
         </div>
 
         <!-- Page header -->
         <div class="page-header reveal">
-            <h1 data-i18n="skills.title">Skills</h1>
-            <p data-i18n="skills.subtitle">Technologies and languages I work with</p>
+            <h1 data-translations="skills.title">Skills</h1>
+            <p data-translations="skills.subtitle">Technologies and languages I work with</p>
         </div>
 
         <hr class="divider">
-
-        <!-- Cursor -->
-        <div class="inner-cursor"></div>
-        <div class="outer-cursor"></div>
 
         <!-- Skill cards -->
         <div class="card-grid reveal">
 
             <div class="card content-section reveal">
-                <h2>
-                    <img class="card-icon" src="/assets/img/icons/CSS/icons8-css-50.png" alt="">
-                    CSS
-                </h2>
-                <span class="badge">Web</span>
-                <p style="margin-top: 0.8rem;" data-i18n="skills.css.desc">
-                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> in combination
-                    with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>.
+                <h2 data-translations="skills.cybersecurity.title">Cybersecurity</h2>
+                <p style="margin-top: 0.8rem;" data-translations="skills.cybersecurity.desc">
+                    I am building a foundation in cybersecurity through school, self-study and Hack The Box labs currently.
                 </p>
             </div>
 
             <div class="card content-section reveal">
-                <h2>
-                    <img class="card-icon" src="/assets/img/icons/HTML/icons8-html-100.png" alt="">
-                    HTML
-                </h2>
-                <span class="badge">Web</span>
-                <p style="margin-top: 0.8rem;" data-i18n="skills.html.desc">
-                    I know how to use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> in
-                    combination with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>.
+                <h2 data-translations="skills.programming.title">Programming</h2>
+                <p style="margin-top: 0.8rem;" data-translations="skills.programming.desc">
+                    I am learning <a href="https://www.python.org/">Python</a> and C#, and use programming to solve practical problems.
                 </p>
             </div>
 
             <div class="card content-section reveal">
-                <h2>
-                    <img class="card-icon" src="/assets/img/icons/Python/icons8-python-50.png" alt="">
-                    Python
-                </h2>
-                <span class="badge">Language</span>
-                <p style="margin-top: 0.8rem;" data-i18n="skills.python.desc">
-                    I somewhat know how to use <a href="https://www.python.org/">Python</a>.
+                <h2 data-translations="skills.networking.title">Networking</h2>
+                <p style="margin-top: 0.8rem;" data-translations="skills.networking.desc">
+                    I practise networking with <a href="https://www.wireshark.org/">Wireshark</a>, <a href="https://nmap.org/">Nmap</a> and <a href="https://www.cisco.com/">Cisco</a> exercises.
                 </p>
             </div>
 
             <div class="card content-section reveal">
-                <h2>English</h2>
-                <span class="badge">Language</span>
-                <p style="margin-top: 0.8rem;" data-i18n="skills.english.desc">
-                    I have taken part in the <a href="https://www.cambridgeenglish.org/">Cambridge</a> tests — I got
-                    level A2 but I think I could get B2 or maybe C1.
+                <h2 data-translations="skills.linux.title">Linux CLI</h2>
+
+                <p style="margin-top: 0.8rem;" data-translations="skills.linux.desc">
+                    I have experience working with the Linux command line and use it while learning system administration.
                 </p>
             </div>
 
             <div class="card content-section reveal">
-                <h2>Video Game Development</h2>
-                <span class="badge">Creative</span>
-                <p style="margin-top: 0.8rem;" data-i18n="skills.gamedev.desc">
-                    I have some basic knowledge of <a href="https://en.wikipedia.org/wiki/Video_game_development">video
-                        game development</a>.
+                <h2 data-translations="skills.windows.title">Windows Administration</h2>
+                <p style="margin-top: 0.8rem;" data-translations="skills.windows.desc">
+                    I understand the basics of Windows administration and security, including managing systems, processes and permissions.
                 </p>
             </div>
 
@@ -109,7 +88,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer" data-i18n="footer">
+    <footer class="footer" id="footer" data-translations="footer">
         &copy; 2025 Studik. Built with care.
     </footer>
 
@@ -128,8 +107,7 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-    <script src="/assets/js/i18n.js"></script>
-    <script src="/assets/js/cursor.js"></script>
+    <script src="/assets/js/translations.js"></script>
 
 </body>
 
