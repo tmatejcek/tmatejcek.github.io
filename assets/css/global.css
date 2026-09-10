@@ -354,6 +354,7 @@ a:visited {
     opacity: 0;
     transition: opacity 0.35s ease;
     pointer-events: none;
+    
 }
 
 .card:hover {
@@ -496,6 +497,8 @@ a:visited {
 /* ───────── Content sections ───────── */
 .content-section {
     margin-bottom: 2.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .content-section h2 {
@@ -505,6 +508,10 @@ a:visited {
 
 .content-section p {
     line-height: 1.8;
+}
+
+.linux-card {
+    padding-bottom: 1rem;
 }
 
 .content-section {
